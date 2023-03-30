@@ -1,0 +1,18 @@
+@import url("./index.css");
+
+.app-card-custom-bg {
+  background: var(--main-gray-bg) !important;
+  user-select: none;
+}
+
+/* .app-card-custom-bg:active {
+  outline: 3px solid var(--main-orange-darker);
+} */
+
+button {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.app-custom-card-subtitle {
+  color: var(--main-orange-text);
+}

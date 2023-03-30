@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/FoodSelection.css" />
+    <link rel="stylesheet" href="../css/CheckoutOrder.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Marino Selection</title>
+  </head>
+  <body>
+    <!-- Notes for cooker -->
+    <div class="modal" tabindex="-1" id="notesmodal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <header class="position-relative pt-4 pb-4">
+              <h3 class="text-center">Notas para el chef</h3>
+              <button
+                type="button"
+                class="btn app-btn-custom-icon position-absolute right"
+                data-bs-toggle="modal"
+                data-bs-target="#checkoutOrderModal"
+              >
+                &times;
+              </button>
+            </header>
+            <textarea
+              class="textarea-notes w-100 p-3"
+              placeholder="Detalle su descripcion"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- print bill -->
+    <div class="modal" tabindex="-1" id="printbillmodal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <header class="position-relative pt-4">
+              <h4 class="text-center fw-bold pt-4 fs-5">
+                Número de orden<br /><span class="main-text">b-238</span>
+              </h4>
+              <h3 class="text-center fw-bold pt-2">
+                ¿Desea imprimir <br /><span class="main-text">su factura?</span>
+              </h3>
+              <a href="../index.html">
+                <button
+                  type="button"
+                  class="btn app-btn-custom-icon position-absolute right"
+                >
+                  &times;
+                </button>
+              </a>
+            </header>
+            <div class="mt-4 row gap-3 px-4">
+              <button type="radio" class="btn bg-light col py-4 border-0">
+                <img
+                  src="../public/icons/document-icon.png"
+                  class="d-block mb-4 mx-auto"
+                  alt="..."
+                  width="120"
+                />
+                <strong class="text-center mt-4">Imprimir</strong>
+              </button>
+              <button type="radio" class="btn bg-light col py-4 border-0">
+                <img
+                  src="../public/icons/email-icon.png"
+                  class="d-block mb-4 mx-auto"
+                  alt="..."
+                  width="120"
+                />
+                <strong class="text-center mt-4">Enviar por correo</strong>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- processing order modal -->
+    <div
+      class="modal fade"
+      tabindex="-1"
+      id="processingordermodal"
+      role="dialog"
+      tabindex="-1"
+      role="dialog"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <header class="text-center pt-2">
+              <h5 class="app-custom-font-bolder">Total de la orden</h5>
+              <h2 class="main-text app-custom-font-bolder">S/46</h2>
+              <!-- <button
+                type="button"
+                class="btn app-btn-custom-icon position-absolute right"
+              >
+                &times;
+              </button> -->
+            </header>
+
+            <!-- body section -->
+            <div class="d-flex flex-column align-items-center">
+              <img
+                class="img-fluid p-5 py-4"
+                src="../public/icons/clock-icon.png"
+                alt="card-icon-img"
+              />
+              <h6 class="app-custom-font-bolder">PEDIDO PROCESÁNDOSE...</h6>
+              <h6 class="app-custom-font-bolder pt-2">
+                <span id="processingtimer">7</span> segundos...
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- insert credit card first try -->
+    <div
+      class="modal fade"
+      tabindex="-1"
+      id="insertcreditcard1st"
+      role="dialog"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <header class="text-center pt-2">
+              <h5 class="app-custom-font-bolder">Total de la orden</h5>
+              <h2 class="main-text app-custom-font-bolder">S/46</h2>
+              <!-- <button
+                type="button"
+                class="btn app-btn-custom-icon position-absolute right"
+              >
+                &times;
+              </button> -->
+            </header>
+
+            <!-- body section -->
+            <div class="d-flex flex-column align-items-center">
+              <img
+                class="img-fluid p-5 py-4"
+                src="../public/icons/credit-card-icon.png"
+                alt="card-icon-img"
+              />
+              <h6 class="app-custom-font-bolder">INSERTE SU TARJETA DE</h6>
+              <h6 class="app-custom-font-bolder">CRÉDITO</h6>
+              <h6 class="app-custom-font-bolder pt-2">
+                <span id="insertcardtimer">7</span> segundos...
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- choose payment method modal -->
+    <div class="modal" tabindex="-1" id="paymentmethodmodal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <header class="position-relative pt-4">
+              <h3 class="text-center fw-bold pt-4">
+                Seleccione su <br /><span class="main-text"
+                  >método de pago</span
+                >
+              </h3>
+              <button
+                type="button"
+                class="btn app-btn-custom-icon position-absolute right"
+                data-bs-toggle="modal"
+                data-bs-target="#cancelOrderModal"
+              >
+                &times;
+              </button>
+            </header>
+            <div class="mt-4 row gap-3 px-4">
+              <button type="radio" class="btn bg-light border-0 col py-4">
+                <img
+                  src="../public/icons/payment-icon.png"
+                  class="d-block mb-4 mx-auto"
+                  alt="..."
+                  width="120"
+                />
+                <strong class="text-center mt-4">Efectivo</strong>
+              </button>
+              <button
+                id="payusingcreditcardbtn"
+                data-bs-toggle="modal"
+                data-bs-target="#insertcreditcard1st"
+                type="radio"
+                class="btn bg-light border-0 col py-4"
+              >
+                <img
+                  src="../public/icons/credit-card-icon.png"
+                  class="d-block mb-4 mx-auto"
+                  alt="..."
+                  width="120"
+                />
+                <strong class="text-center mt-4">Tarjeta</strong>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- checkout order modal -->
+    <div class="modal fade" tabindex="-1" id="checkoutOrderModal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body app-custom-font-size">
+            <header class="position-relative">
+              <h3 class="text-center fw-bold app-custom-font-size pt-2">
+                Revise
+                <span class="main-text">su orden</span>
+              </h3>
+              <button
+                type="button"
+                class="btn app-btn-custom-icon position-absolute right"
+                data-bs-dismiss="modal"
+              >
+                &times;
+              </button>
+            </header>
+            <section class="items" style="height: 330px; overflow-y: auto">
+              <article class="item">
+                <div class="item-product">
+                  <div class="item-image"></div>
+                  <div class="ps-2">
+                    <p class="fw-bold m-0">Causa rellena</p>
+                    <p class="item-description">
+                      Carne de salmón, acompañado de papas, camote, etc
+                    </p>
+                  </div>
+                </div>
+                <div class="item-quantity">
+                  <div class="d-flex gap-2">
+                    <div class="item-less">-</div>
+                    <div class="item-total">1</div>
+                    <div class="item-add">+</div>
+                  </div>
+                </div>
+                <div class="item-price fw-bold">S/23</div>
+                <div class="item-action" onclick="removeItem(0)">
+                  <img
+                    src="../public/icons/trash-icon.png"
+                    alt="trash"
+                    width="20"
+                  />
+                </div>
+              </article>
+              <article class="item">
+                <div class="item-product">
+                  <div class="item-image"></div>
+                  <div class="ps-2">
+                    <p class="fw-bold m-0">Causa rellena</p>
+                    <p class="item-description">
+                      Carne de salmón, acompañado de papas, camote, etc
+                    </p>
+                  </div>
+                </div>
+                <div class="item-quantity">
+                  <div class="d-flex gap-2">
+                    <div class="item-less">-</div>
+                    <div class="item-total">1</div>
+                    <div class="item-add">+</div>
+                  </div>
+                </div>
+                <div class="item-price fw-bold">S/23</div>
+                <div class="item-action" onclick="removeItem(1)">
+                  <img
+                    src="../public/icons/trash-icon.png"
+                    alt="trash"
+                    width="20"
+                  />
+                </div>
+              </article>
+              <article class="item">
+                <div class="item-product">
+                  <div class="item-image"></div>
+                  <div class="ps-2">
+                    <p class="fw-bold m-0">Causa rellena</p>
+                    <p class="item-description">
+                      Carne de salmón, acompañado de papas, camote, etc
+                    </p>
+                  </div>
+                </div>
+                <div class="item-quantity">
+                  <div class="d-flex gap-2">
+                    <div class="item-less">-</div>
+                    <div class="item-total">1</div>
+                    <div class="item-add">+</div>
+                  </div>
+                </div>
+                <div class="item-price fw-bold">S/23</div>
+                <div class="item-action" onclick="removeItem(2)">
+                  <img
+                    src="../public/icons/trash-icon.png"
+                    alt="trash"
+                    width="20"
+                  />
+                </div>
+              </article>
+              <article class="item">
+                <div class="item-product">
+                  <div class="item-image"></div>
+                  <div class="ps-2">
+                    <p class="fw-bold m-0">Causa rellena</p>
+                    <p class="item-description">
+                      Carne de salmón, acompañado de papas, camote, etc
+                    </p>
+                  </div>
+                </div>
+                <div class="item-quantity">
+                  <div class="d-flex gap-2">
+                    <div class="item-less">-</div>
+                    <div class="item-total">1</div>
+                    <div class="item-add">+</div>
+                  </div>
+                </div>
+                <div class="item-price fw-bold">S/23</div>
+                <div class="item-action" onclick="removeItem(3)">
+                  <img
+                    src="../public/icons/trash-icon.png"
+                    alt="trash"
+                    width="20"
+                  />
+                </div>
+              </article>
+            </section>
+            <div class="card bg-light border-0 mt-2 p-4 pb-0">
+              <div class="d-flex justify-content-between fw-bold">
+                <div>
+                  <p class="main-text">NOTAS</p>
+                  <p>Extra picante</p>
+                </div>
+                <div>
+                  <p class="main-text">PEDIDO</p>
+                  <p>Para llevar</p>
+                </div>
+                <div>
+                  <p class="main-text">TOTAL</p>
+                  <p class="main-text fs-1">S/46</p>
+                </div>
+              </div>
+            </div>
+            <footer class="w-full">
+              <div class="pt-3 px-3 d-flex text-center">
+                <button
+                  type="button"
+                  class="btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#notesmodal"
+                >
+                  <img
+                    class="mx-auto"
+                    src="../public/icons/edit-notes-icon.png"
+                    alt="icon"
+                    width="30"
+                  />
+                  <p class="text-center">Añadir Notas</p>
+                </button>
+                <button type="button" class="btn">
+                  <img
+                    class="mx-auto"
+                    src="../public/icons/gift-icon.png"
+                    alt="icon"
+                    width="30"
+                  />
+                  <p class="text-center">Usar Voucher</p>
+                </button>
+                <div class="ms-auto">
+                  <button
+                    class="btn btn-dark btn-lg app-btn-darker-custom app-custom-font-bolder rounded-pill"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#paymentmethodmodal"
+                  >
+                    Realizar pedido
+                  </button>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- confirmation modal -->
+    <div class="modal fade" tabindex="-1" id="cancelOrderModal" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <header class="position-relative">
+              <h4 class="text-center fw-bold pt-4 pb-4">
+                ¿Está seguro que desea <br />cancelar el pedido?
+              </h4>
+              <button
+                type="button"
+                class="btn app-btn-custom-icon position-absolute right"
+              >
+                &times;
+              </button>
+            </header>
+            <div class="pt-3 d-flex justify-content-center gap-3">
+              <button
+                class="btn btn-outline-light btn-lg app-btn-outline-custom app-custom-font-bolder rounded-pill px-5"
+                type="button"
+                data-bs-dismiss="modal"
+              >
+                NO
+              </button>
+              <a href="../index.html">
+                <button
+                  class="btn btn-dark btn-lg app-btn-darker-custom app-custom-font-bolder rounded-pill px-5"
+                  type="button"
+                >
+                  SÍ
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main-template></main-template>
+
+    <!-- script with local script files -->
+    <script type="text/javascript" src="../js/MarinoDishesTemplate.js"></script>
+
+    <script type="text/javascript">
+      let floatingMenu = document.getElementById("floating-menu");
+      let marinoDishes = document.getElementsByClassName("app-card-name");
+
+      function addToList() {
+        floatingMenu.setAttribute("style", "display: flex !important");
+      }
+
+      function hideFloatingMenu() {
+        floatingMenu.setAttribute("style", "display: none !important");
+      }
+
+      // function removeItem(index) {
+      //   let dishItem = document.getElementsByClassName("item");
+      //   dishItem[index].setAttribute("style", "display: none");
+
+      // }
+
+      // Toggle delivery option value
+      let isTakeAway = false;
+      let changeDeliveryOptionButton = document.getElementById(
+        "changeDeliveryOption"
+      );
+
+      changeDeliveryOptionButton.addEventListener("click", function () {
+        isTakeAway
+          ? (this.textContent = "Para llevar")
+          : (this.textContent = "Para dentro");
+
+        isTakeAway = !isTakeAway;
+        setState;
+      });
+
+      let payWithCreditCardBtn = document.getElementById(
+        "payusingcreditcardbtn"
+      );
+      let processingOrderModal = new bootstrap.Modal("#processingordermodal");
+      let printBillModal = new bootstrap.Modal("#printbillmodal");
+      let paymentModal = new bootstrap.Modal("#insertcreditcard1st");
+      let insertCreditCardTimer = document.getElementById("insertcardtimer");
+      let processingOrderTimer = document.getElementById("processingtimer");
+
+      // console.log(insertCreditCardTimer);
+
+      payWithCreditCardBtn.addEventListener("click", function () {
+        let delay = 7000;
+        setTimeout(loadProcessingModal, delay);
+
+        let insertCreditCardIntervalId = counter(insertCreditCardTimer);
+
+        function counter(el) {
+          let i = 6;
+          return setInterval(() => {
+            if (i < 1) {
+              i = 6;
+            }
+            el.textContent = i--;
+          }, 1000);
+        }
+
+        function loadProcessingModal() {
+          paymentModal.hide();
+          processingOrderModal.show();
+
+          let processingOrderIntervalId = counter(processingOrderTimer);
+
+          setTimeout(loadTickedModal, delay);
+
+          function loadTickedModal() {
+            clearInterval(processingOrderIntervalId);
+            processingOrderModal.hide();
+            printBillModal.show();
+            hideFloatingMenu();
+          }
+
+          clearInterval(insertCreditCardIntervalId);
+        }
+      });
+    </script>
+  </body>
+</html>

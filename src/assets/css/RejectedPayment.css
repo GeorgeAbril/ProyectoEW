@@ -1,0 +1,17 @@
+@import url("./index.css");
+
+
+.error-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    right: 37%;
+    top: 40%;
+    font-size: 3em;
+    border-radius: 100%;
+    background: red;
+    color: white;
+    position: absolute;
+}

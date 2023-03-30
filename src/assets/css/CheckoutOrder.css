@@ -1,0 +1,66 @@
+@import url("./index.css");
+
+.app-custom-font-size {
+  font-size: 0.9rem;
+}
+
+.item {
+  display: flex;
+  padding-top: 6px;
+  border-bottom: 2px solid var(--main-gray-bg);
+}
+
+.item-product {
+  display: flex;
+  column-gap: 3px;
+}
+
+.item-description {
+  font-size: 0.8rem;
+  color: var(--main-subtext);
+  line-height: normal;
+}
+
+.item-image {
+  border-radius: 10px;
+  width: 80px;
+  height: 70px;
+  background-color: var(--main-gray-bg);
+}
+
+.item-quantity,
+.item-price,
+.item-action {
+  border-left: 2px solid var(--main-gray-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 14px;
+  width: 140px;
+}
+
+.item-less,
+.item-add {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 2em; */
+}
+.item-less {
+  background-color: var(--main-subtext);
+  color: white;
+  font-weight: bold;
+}
+.item-add {
+  background: orange;
+  color: white;
+  font-weight: bold;
+}
+
+/* .modal-content,
+.modal-body {
+  width: 650px;
+} */
