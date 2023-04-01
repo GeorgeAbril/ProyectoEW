@@ -1,17 +1,81 @@
-<nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav" style="opacity: 1;background-color: rgba(52,58,64,0.75);">
-    <div class="container"><a class="navbar-brand js-scroll-trigger" routerLink="home" style="color: rgb(255,165,85);">J&amp;J</a><button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarResponsive" type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgb(255,165,85);"><i class="fa fa-bars" style="color: rgba(255,255,255,0.75);"></i></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="nav navbar-nav ml-auto text-uppercase">
-                <!-- <li class="nav-item" role="presentation"><a class="nav-link active js-scroll-trigger" href="#portfolio" style="color: rgb(255,165,85);">PROYECTOS</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link active js-scroll-trigger" href="#services" style="color: rgb(255,165,85);">DEPARTAMENTOs</a></li> -->
-                <li class="nav-item" role="presentation"><a class="nav-link active js-scroll-trigger" routerLink="aboutus" style="color: rgb(255,165,85);">Acerca de Nosotros</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link active js-scroll-trigger" routerLink="team" style="color: rgb(255,165,85);">Equipo</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link active js-scroll-trigger" routerLink="contactus" style="color: rgb(255,165,85);">Contactenos</a></li>
-            </ul>
-            <a class="btn btn-primary text-black-50 border-dark" role="button" routerLink="admin/user/login" style="font-family: Montserrat, sans-serif;font-weight: normal;background-color: rgb(255,165,85);border:none;">Ingresar</a>
+<title>Inicio</title>
+  <body>
+    <div class="container vh-100">
+      <div class="row h-100 d-flex justify-content-center">
+        <div
+          class="col col-sm-9 col-md-7 col-lg-6 col-xl-5 col-xxl-4 g-0 app-bg-img d-flex flex-column justify-content-between shadow"
+        >
+       <!--- <a class="btn btn-primary text-black-50 border-dark" role="button" routerLink="admin/user/login" style="font-family: Montserrat, sans-serif;font-weight: normal;background-color: rgb(255,165,85);border:none;">Ingresar</a>-->
+          <!-- header section -->
+          <header class="text-center py-4">
+            <img
+              src="assets/public/logo/app-logo.png"
+              alt="app-logo-img"
+              width="160"
+            />
+          </header>
+
+          <!-- middle section divided by 50% each -->
+          <div class="flex-grow-1">
+            <div
+              class="h-50 px-4 d-flex flex-column justify-content-start align-items-end"
+            >
+              <div class="text-center">
+                <img
+                  src="assets/public/logo/finger-logo.png"
+                  alt="finger-logo-img"
+                  width="130"
+                />
+                <h4 class="app-custom-font-title app-custom-font-gothic">
+                  <p>ORDENE</p>
+                  <p class="app-custom-font-subttitle">Y PAGUE AQUÍ</p>
+                </h4>
+              </div>
+            </div>
+            <div
+              class="h-50 d-flex flex-column justify-content-end text-center app-custom-overlay"
+            >
+              <h6 class="app-custom-font-bolder lh-1">
+                PAGUE CON SUS TARJETAS CRÉDITO, DÉBITO
+              </h6>
+              <div class="pt-3 pb-4 d-flex justify-content-center">
+                <img
+                  src="assets/public/payment-method-img/Mastercard-logo.png"
+                  alt="mastercard-img"
+                  height="25"
+                />
+                <img
+                  class="ps-4"
+                  src="assets/public/payment-method-img/g4158.png"
+                  alt="visa-img"
+                  height="20"
+                />
+                <img
+                  class="ps-4"
+                  src="assets/public/payment-method-img/Group 3.png"
+                  alt="dinners-img"
+                  height="25"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- order button here -->
+          <a href="assets/pages/SelectLanguage.html">
+            <button
+              type="button"
+              class="btn btn-lg app-btn-custom btn-dark w-100 rounded-0 py-3 border-0"
+            >
+              <h4 class="app-custom-font-bolder">EMPEZAR ORDEN</h4>
+            </button>
+          </a>
         </div>
+      </div>
     </div>
-</nav>
+  </body>
+
+
+
 <section style="min-height: 650px; padding-top: 0px; padding-bottom: 0px; ">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </section>
