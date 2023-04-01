@@ -16,3 +16,14 @@ button {
 .app-custom-card-subtitle {
   color: var(--main-orange-text);
 }
+
+.contenedor-lenguajeLog{
+  display: flex;
+}
+
+.boton-Log{
+  margin-left: 75px;
+}
+.imagen-centro{
+  margin-left: 155px;
+}
