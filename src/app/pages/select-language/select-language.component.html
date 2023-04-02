@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/SelectLanguage.css" />
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
@@ -13,7 +11,6 @@
     <title>Select your language</title>
   </head>
   <body>
-    <app-root></app-root>
     <div class="container vh-100">
       <div class="row h-100 d-flex justify-content-center">
         <div
@@ -25,14 +22,14 @@
             <div class="contenedor-lenguajeLog">
               <div class="imagen-centro">
                 <img
-                src="../public/logo/app-logo-white.png"
+                src="assets/public/logo/app-logo-white.png"
                 alt="app-logo-img"
                 width="160"
               />
               </div>
               <div class="boton-Log">
                 <nav>
-                <a role="button" RouterLink="admin/user/login" type="button" class="btn btn-outline-light">
+                <a role="button" routerLink="../login" type="button" class="btn btn-outline-light">
                 Login
               </a>
             </nav>
@@ -58,7 +55,7 @@
                 <div class="card-body">
                   <img
                     class="pt-5 pb-4"
-                    src="../public/icons/fork-icon.png"
+                    src="assets/public/icons/fork-icon.png"
                     alt="fork-icon"
                     width="100"
                   />
@@ -78,8 +75,8 @@
                 <div class="card-body">
                   <img
                     class="pt-5 pb-4"
-                    src="../public/icons/plasticbag-icon.png"
-                    alt="fork-icon"
+                    src="assets/public/icons/plasticbag-icon.png"
+                    alt="plasticbag-icon"
                     width="100"
                   />
                   <h6 class="card-title app-custom-font-bolder pb-4">
@@ -115,13 +112,13 @@
           <!-- lower section select screen -->
           <div class="py-4 d-flex justify-content-end pe-4 gap-2">
             <!-- prev button -->
-            <a class="text-decoration-none" href="../index.html">
+            <a class="text-decoration-none" routerLink="../home">
               <button
                 class="btn btn-dark app-btn-darker-custom app-custom-font-bolder rounded-pill d-flex align-items-center"
                 type="button"
               >
                 <img
-                  src="../public/icons/leftarrow-icon.png"
+                  src="assets/public/icons/leftarrow-icon.png"
                   alt="leftarrow-icon"
                   width="9"
                 />
@@ -137,7 +134,7 @@
               >
                 <span class="pe-2">SIGUIENTE</span>
                 <img
-                  src="../public/icons/rightarrow-icon.png"
+                  src="assets/public/icons/rightarrow-icon.png"
                   alt="rightarrow-icon"
                   width="9"
                 />
@@ -149,7 +146,7 @@
               type="button"
             >
               <img
-                src="../public/icons/wheelchair-icon.png"
+                src="assets/public/icons/wheelchair-icon.png"
                 alt="wheelchair-icon"
                 height="25"
               />
@@ -159,4 +156,3 @@
       </div>
     </div>
   </body>
-</html>

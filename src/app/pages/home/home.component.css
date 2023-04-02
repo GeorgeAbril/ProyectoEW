@@ -135,28 +135,3 @@ h4.app-custom-font-title {
 [type="radio"]:focus {
   outline: 3px solid var(--main-orange-text) !important;
 }
-
-.app-card-custom-bg {
-    background: var(--main-gray-bg) !important;
-    user-select: none;
-  }
-  
-  
-  button {
-    border-color: rgba(0, 0, 0, 0);
-  }
-  
-  .app-custom-card-subtitle {
-    color: var(--main-orange-text);
-  }
-  
-  .contenedor-lenguajeLog{
-    display: flex;
-  }
-  
-  .boton-Log{
-    margin-left: 75px;
-  }
-  .imagen-centro{
-    margin-left: 155px;
-  }
