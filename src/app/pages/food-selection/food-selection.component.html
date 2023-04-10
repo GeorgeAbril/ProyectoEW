@@ -1,0 +1,865 @@
+<!-- <p>foodselection works!</p> -->
+<!-- Notes for cooker -->
+<div class="modal" tabindex="-1" id="notesmodal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <header class="position-relative pt-4 pb-4">
+          <h3 class="text-center">Notas para el chef</h3>
+          <button
+            type="button"
+            class="btn app-btn-custom-icon position-absolute right"
+            data-bs-toggle="modal"
+            data-bs-target="#checkoutOrderModal"
+          >
+            &times;
+          </button>
+        </header>
+        <textarea
+          class="textarea-notes w-100 p-3"
+          placeholder="Detalle su descripcion"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- print bill -->
+<div class="modal" tabindex="-1" id="printbillmodal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <header class="position-relative pt-4">
+          <h4 class="text-center fw-bold pt-4 fs-5">
+            Número de orden<br /><span class="main-text">b-238</span>
+          </h4>
+          <h3 class="text-center fw-bold pt-2">
+            ¿Desea imprimir <br /><span class="main-text">su factura?</span>
+          </h3>
+          <a href="../index.html">
+            <button
+              type="button"
+              class="btn app-btn-custom-icon position-absolute right"
+            >
+              &times;
+            </button>
+          </a>
+        </header>
+        <div class="mt-4 row gap-3 px-4">
+          <button type="radio" class="btn bg-light col py-4 border-0">
+            <img
+              src="../public/icons/document-icon.png"
+              class="d-block mb-4 mx-auto"
+              alt="..."
+              width="120"
+            />
+            <strong class="text-center mt-4">Imprimir</strong>
+          </button>
+          <button type="radio" class="btn bg-light col py-4 border-0">
+            <img
+              src="../public/icons/email-icon.png"
+              class="d-block mb-4 mx-auto"
+              alt="..."
+              width="120"
+            />
+            <strong class="text-center mt-4">Enviar por correo</strong>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- processing order modal -->
+<div
+  class="modal fade"
+  tabindex="-1"
+  id="processingordermodal"
+  role="dialog"
+  tabindex="-1"
+  role="dialog"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <header class="text-center pt-2">
+          <h5 class="app-custom-font-bolder">Total de la orden</h5>
+          <h2 class="main-text app-custom-font-bolder">S/46</h2>
+          <!-- <button
+            type="button"
+            class="btn app-btn-custom-icon position-absolute right"
+          >
+            &times;
+          </button> -->
+        </header>
+
+        <!-- body section -->
+        <div class="d-flex flex-column align-items-center">
+          <img
+            class="img-fluid p-5 py-4"
+            src="../public/icons/clock-icon.png"
+            alt="card-icon-img"
+          />
+          <h6 class="app-custom-font-bolder">PEDIDO PROCESÁNDOSE...</h6>
+          <h6 class="app-custom-font-bolder pt-2">
+            <span id="processingtimer">7</span> segundos...
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- insert credit card first try -->
+<div
+  class="modal fade"
+  tabindex="-1"
+  id="insertcreditcard1st"
+  role="dialog"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <header class="text-center pt-2">
+          <h5 class="app-custom-font-bolder">Total de la orden</h5>
+          <h2 class="main-text app-custom-font-bolder">S/46</h2>
+          <!-- <button
+            type="button"
+            class="btn app-btn-custom-icon position-absolute right"
+          >
+            &times;
+          </button> -->
+        </header>
+
+        <!-- body section -->
+        <div class="d-flex flex-column align-items-center">
+          <img
+            class="img-fluid p-5 py-4"
+            src="../public/icons/credit-card-icon.png"
+            alt="card-icon-img"
+          />
+          <h6 class="app-custom-font-bolder">INSERTE SU TARJETA DE</h6>
+          <h6 class="app-custom-font-bolder">CRÉDITO</h6>
+          <h6 class="app-custom-font-bolder pt-2">
+            <span id="insertcardtimer">7</span> segundos...
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- choose payment method modal -->
+<div class="modal" tabindex="-1" id="paymentmethodmodal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <header class="position-relative pt-4">
+          <h3 class="text-center fw-bold pt-4">
+            Seleccione su <br /><span class="main-text"
+              >método de pago</span
+            >
+          </h3>
+          <button
+            type="button"
+            class="btn app-btn-custom-icon position-absolute right"
+            data-bs-toggle="modal"
+            data-bs-target="#cancelOrderModal"
+          >
+            &times;
+          </button>
+        </header>
+        <div class="mt-4 row gap-3 px-4">
+          <button type="radio" class="btn bg-light border-0 col py-4">
+            <img
+              src="../public/icons/payment-icon.png"
+              class="d-block mb-4 mx-auto"
+              alt="..."
+              width="120"
+            />
+            <strong class="text-center mt-4">Efectivo</strong>
+          </button>
+          <button
+            id="payusingcreditcardbtn"
+            data-bs-toggle="modal"
+            data-bs-target="#insertcreditcard1st"
+            type="radio"
+            class="btn bg-light border-0 col py-4"
+          >
+            <img
+              src="../public/icons/credit-card-icon.png"
+              class="d-block mb-4 mx-auto"
+              alt="..."
+              width="120"
+            />
+            <strong class="text-center mt-4">Tarjeta</strong>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- checkout order modal -->
+<div class="modal fade" tabindex="-1" id="checkoutOrderModal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body app-custom-font-size">
+        <header class="position-relative">
+          <h3 class="text-center fw-bold app-custom-font-size pt-2">
+            Revise
+            <span class="main-text">su orden</span>
+          </h3>
+          <button
+            type="button"
+            class="btn app-btn-custom-icon position-absolute right"
+            data-bs-dismiss="modal"
+          >
+            &times;
+          </button>
+        </header>
+        <section class="items" style="height: 330px; overflow-y: auto">
+          <article class="item">
+            <div class="item-product">
+              <div class="item-image"></div>
+              <div class="ps-2">
+                <p class="fw-bold m-0">Causa rellena</p>
+                <p class="item-description">
+                  Carne de salmón, acompañado de papas, camote, etc
+                </p>
+              </div>
+            </div>
+            <div class="item-quantity">
+              <div class="d-flex gap-2">
+                <div class="item-less">-</div>
+                <div class="item-total">1</div>
+                <div class="item-add">+</div>
+              </div>
+            </div>
+            <div class="item-price fw-bold">S/23</div>
+            <div class="item-action" onclick="removeItem(0)">
+              <img
+                src="../public/icons/trash-icon.png"
+                alt="trash"
+                width="20"
+              />
+            </div>
+          </article>
+          <article class="item">
+            <div class="item-product">
+              <div class="item-image"></div>
+              <div class="ps-2">
+                <p class="fw-bold m-0">Causa rellena</p>
+                <p class="item-description">
+                  Carne de salmón, acompañado de papas, camote, etc
+                </p>
+              </div>
+            </div>
+            <div class="item-quantity">
+              <div class="d-flex gap-2">
+                <div class="item-less">-</div>
+                <div class="item-total">1</div>
+                <div class="item-add">+</div>
+              </div>
+            </div>
+            <div class="item-price fw-bold">S/23</div>
+            <div class="item-action" onclick="removeItem(1)">
+              <img
+                src="../public/icons/trash-icon.png"
+                alt="trash"
+                width="20"
+              />
+            </div>
+          </article>
+          <article class="item">
+            <div class="item-product">
+              <div class="item-image"></div>
+              <div class="ps-2">
+                <p class="fw-bold m-0">Causa rellena</p>
+                <p class="item-description">
+                  Carne de salmón, acompañado de papas, camote, etc
+                </p>
+              </div>
+            </div>
+            <div class="item-quantity">
+              <div class="d-flex gap-2">
+                <div class="item-less">-</div>
+                <div class="item-total">1</div>
+                <div class="item-add">+</div>
+              </div>
+            </div>
+            <div class="item-price fw-bold">S/23</div>
+            <div class="item-action" onclick="removeItem(2)">
+              <img
+                src="../public/icons/trash-icon.png"
+                alt="trash"
+                width="20"
+              />
+            </div>
+          </article>
+          <article class="item">
+            <div class="item-product">
+              <div class="item-image"></div>
+              <div class="ps-2">
+                <p class="fw-bold m-0">Causa rellena</p>
+                <p class="item-description">
+                  Carne de salmón, acompañado de papas, camote, etc
+                </p>
+              </div>
+            </div>
+            <div class="item-quantity">
+              <div class="d-flex gap-2">
+                <div class="item-less">-</div>
+                <div class="item-total">1</div>
+                <div class="item-add">+</div>
+              </div>
+            </div>
+            <div class="item-price fw-bold">S/23</div>
+            <div class="item-action" onclick="removeItem(3)">
+              <img
+                src="../public/icons/trash-icon.png"
+                alt="trash"
+                width="20"
+              />
+            </div>
+          </article>
+        </section>
+        <div class="card bg-light border-0 mt-2 p-4 pb-0">
+          <div class="d-flex justify-content-between fw-bold">
+            <div>
+              <p class="main-text">NOTAS</p>
+              <p>Extra picante</p>
+            </div>
+            <div>
+              <p class="main-text">PEDIDO</p>
+              <p>Para llevar</p>
+            </div>
+            <div>
+              <p class="main-text">TOTAL</p>
+              <p class="main-text fs-1">S/46</p>
+            </div>
+          </div>
+        </div>
+        <footer class="w-full">
+          <div class="pt-3 px-3 d-flex text-center">
+            <button
+              type="button"
+              class="btn"
+              data-bs-toggle="modal"
+              data-bs-target="#notesmodal"
+            >
+              <img
+                class="mx-auto"
+                src="../public/icons/edit-notes-icon.png"
+                alt="icon"
+                width="30"
+              />
+              <p class="text-center">Añadir Notas</p>
+            </button>
+            <button type="button" class="btn">
+              <img
+                class="mx-auto"
+                src="../public/icons/gift-icon.png"
+                alt="icon"
+                width="30"
+              />
+              <p class="text-center">Usar Voucher</p>
+            </button>
+            <div class="ms-auto">
+              <button
+                class="btn btn-dark btn-lg app-btn-darker-custom app-custom-font-bolder rounded-pill"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#paymentmethodmodal"
+              >
+                Realizar pedido
+              </button>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- confirmation modal -->
+<div class="modal fade" tabindex="-1" id="cancelOrderModal" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <header class="position-relative">
+          <h4 class="text-center fw-bold pt-4 pb-4">
+            ¿Está seguro que desea <br />cancelar el pedido?
+          </h4>
+          <button
+            type="button"
+            class="btn app-btn-custom-icon position-absolute right"
+          >
+            &times;
+          </button>
+        </header>
+        <div class="pt-3 d-flex justify-content-center gap-3">
+          <button
+            class="btn btn-outline-light btn-lg app-btn-outline-custom app-custom-font-bolder rounded-pill px-5"
+            type="button"
+            data-bs-dismiss="modal"
+          >
+            NO
+          </button>
+          <a href="../index.html">
+            <button
+              class="btn btn-dark btn-lg app-btn-darker-custom app-custom-font-bolder rounded-pill px-5"
+              type="button"
+            >
+              SÍ
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container position-relative">
+  <div class="row d-flex justify-content-center">
+    <div
+      id="main-div"
+      class="col col-sm-9 col-md-7 col-lg-5 col-xl-5 col-xxl-4 g-0 bg-white d-flex flex-column vh-100 text-center shadow"
+    >
+      <!-- header row template loader before middle section-->
+      <header class="text-center py-3 app-custom-bg">
+        <img
+          src="../public/logo/app-logo-white.png"
+          alt="app-logo-img"
+          width="160"
+        />
+      </header>
+
+      <div class="px-3 pb-4 app-custom-before-bg">
+        <!-- carousel container -->
+        <div
+          id="app-carousel"
+          class="carousel slide shadow-sm position-relative"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              data-bs-target="#app-carousel"
+              data-bs-slide-to="0"
+              class="active app-custom-indicator"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              class="app-custom-indicator"
+              data-bs-target="#app-carousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              class="app-custom-indicator"
+              data-bs-target="#app-carousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner rounded-3">
+            <div class="carousel-item active">
+              <img
+                src="../public/carousel-imgs/carousel-img01.png"
+                class="w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../public/carousel-imgs/carousel-img02.png"
+                class="w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../public/carousel-imgs/carousel-img03.png"
+                class="w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#app-carousel"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#app-carousel"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- card category section -->
+      <div class="px-3">
+        <h6 class="text-start app-custom-font-bolder pt-2 pb-2">
+          Seleccione
+          <span class="app-custom-text-orange-dark">su producto</span>
+        </h6>
+
+        <!-- card categories container -->
+        <div class="d-flex justify-content-between pb-4">
+          <div
+            class="card shadow-sm app-custom-card-orange-bg app-custom-card border-0 rounded-4"
+          >
+            <img src="../public/category-imgs/criollo.png" alt="categ-img" />
+            <div class="card-body p-0">
+              <div
+                class="card-text app-custom-card-text app-custom-font-bolder pb-2"
+              >
+                Criollo
+              </div>
+            </div>
+          </div>
+          <a href="./MarinoSection.html" class="text-decoration-none text-black">
+          <div
+          class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4"
+        >
+          <img src="../public/category-imgs/marino.png" alt="categ-img" />
+          <div class="card-body p-0">
+            <div
+              class="card-text app-custom-card-text app-custom-font-bolder pb-2"
+            >
+              Marino
+            </div>
+          </div>
+        </div>
+          </a>
+          <div
+            class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4"
+          >
+            <img src="../public/category-imgs/tragos.png" alt="categ-img" />
+            <div class="card-body p-0">
+              <div
+                class="card-text app-custom-card-text app-custom-font-bolder pb-2"
+              >
+                Tragos
+              </div>
+            </div>
+          </div>
+          <div
+            class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4"
+          >
+            <img src="../public/category-imgs/bebidas.png" alt="categ-img" />
+            <div class="card-body p-0">
+              <div
+                class="card-text app-custom-card-text app-custom-font-bolder pb-2"
+              >
+                Bebidas
+              </div>
+            </div>
+          </div>
+          <div
+            class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4"
+          >
+            <img src="../public/category-imgs/postres.png" alt="categ-img" />
+            <div class="card-body p-0">
+              <div
+                class="card-text app-custom-card-text app-custom-font-bolder pb-2"
+              >
+                Postres
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- scrollable dish list -->
+      <div class="flex-grow-1 overflow-y-scroll">
+        <h6 class="app-custom-font-bolder text-start ps-4 pt-2">Recomendados</h6>
+        <div
+          class="mt-3 mb-3 d-flex justify-content-center gap-3 flex-wrap app-custom-dish-card-text fw-bold"
+        >
+          <div class="card app-custom-dish-card-width p-2 pb-0">
+            <img
+              src="../public/criollodishes-img/arrozconpato.png"
+              class="card-img-top"
+              alt="dish-img"
+            />
+            <div class="card-body p-1">
+              <p class="card-text app-card-name">Arroz con pollo</p>
+            </div>
+            <div
+              class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
+            >
+              <span
+                >S/
+                <span class="app-custom-text-orange-dark">24</span></span
+              >
+              <button
+                id="add-to-list"
+                (click)="addToList()"
+                class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
+              >
+                <span class="position-absolute top-0" style="left: 5px">+</span>
+              </button>
+            </div>
+          </div>
+          <div class="card app-custom-dish-card-width p-2 pb-0">
+            <img
+              src="../public/criollodishes-img/tacutacu.png"
+              class="card-img-top"
+              alt="dish-img"
+            />
+            <div class="card-body p-1">
+              <p class="card-text app-card-name">Tacu Tracu</p>
+            </div>
+            <div
+              class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
+            >
+              <span
+                >S/
+                <span class="app-custom-text-orange-dark">24</span></span
+              >
+              <button
+                class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
+              >
+              <span class="position-absolute top-0" style="left: 5px">+</span>
+              </button>
+            </div>
+          </div>
+          <div class="card app-custom-dish-card-width p-2 pb-0">
+            <img
+              src="../public/criollodishes-img/causarellena.png"
+              class="card-img-top"
+              alt="dish-img"
+            />
+            <div class="card-body p-1">
+              <p class="card-text">Causa rellena</p>
+            </div>
+            <div
+              class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
+            >
+              <span
+                >S/
+                <span class="app-custom-text-orange-dark">24</span></span
+              >
+              <button
+                class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
+              >
+              <span class="position-absolute top-0" style="left: 5px">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Más pedidos -->
+        <hr class="border border-dark border-opacity-25 border-4">
+        <h6 class="app-custom-font-bolder text-start ps-4 pt-2">Los más pedidos</h6>
+        <div
+          class="mt-3 mb-4 d-flex justify-content-center gap-3 flex-wrap app-custom-dish-card-text fw-bold"
+        >
+        <div class="card app-custom-dish-card-width p-2 pb-0">
+    <img
+      src="../public/criollodishes-img/picantedecarne.png"
+      class="card-img-top"
+      alt="dish-img"
+    />
+    <div class="card-body p-1">
+      <p class="card-text">Picante de carne</p>
+    </div>
+    <div
+      class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
+    >
+      <span
+        >S/
+        <span class="app-custom-text-orange-dark">24</span></span
+      >
+      <button
+        class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
+      >
+        <span class="position-absolute top-0" style="left: 5px">+</span>
+      </button>
+    </div>
+  </div>
+  <div class="card app-custom-dish-card-width p-2 pb-0">
+    <img
+      src="../public/criollodishes-img/pachamanca.png"
+      class="card-img-top"
+      alt="dish-img"
+    />
+    <div class="card-body p-1">
+      <p class="card-text">Pachamanca</p>
+    </div>
+    <div
+      class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
+    >
+      <span
+        >S/
+        <span class="app-custom-text-orange-dark">24</span></span
+      >
+      <button
+        class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
+      >
+        <span class="position-absolute top-0" style="left: 5px">+</span>
+      </button>
+    </div>
+  </div>
+  <div class="card app-custom-dish-card-width p-2 pb-0">
+    <img
+      src="../public/criollodishes-img/tallarinesverdes.png"
+      class="card-img-top"
+      alt="dish-img"
+    />
+    <div class="card-body p-1">
+      <p class="card-text">Tallarines verdes</p>
+    </div>
+    <div
+      class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
+    >
+      <span
+        >S/
+        <span class="app-custom-text-orange-dark">24</span></span
+      >
+      <button
+        class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
+      >
+        <span class="position-absolute top-0" style="left: 5px">+</span>
+      </button>
+    </div>
+  </div>
+  <div class="card app-custom-dish-card-width p-2 pb-0">
+    <img
+      src="../public/criollodishes-img/asadodepollo.png"
+      class="card-img-top"
+      alt="dish-img"
+    />
+    <div class="card-body p-1">
+      <p class="card-text">Asado de pollo</p>
+    </div>
+    <div
+      class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
+    >
+      <span
+        >S/
+        <span class="app-custom-text-orange-dark">24</span></span
+      >
+      <button
+        class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
+      >
+        <span class="position-absolute top-0" style="left: 5px">+</span>
+      </button>
+    </div>
+  </div>
+  <div class="card app-custom-dish-card-width p-2 pb-0">
+    <img
+      src="../public/criollodishes-img/lomosaltado.png"
+      class="card-img-top"
+      alt="dish-img"
+    />
+    <div class="card-body p-1">
+      <p class="card-text">Lomo saltado</p>
+    </div>
+    <div
+      class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
+    >
+      <span
+        >S/
+        <span class="app-custom-text-orange-dark">24</span></span
+      >
+      <button
+        class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
+      >
+        <span class="position-absolute top-0" style="left: 5px">+</span>
+      </button>
+    </div>
+  </div>
+  <div class="card app-custom-dish-card-width p-2 pb-0">
+    <img
+      src="../public/criollodishes-img/carapulcra.png"
+      class="card-img-top"
+      alt="dish-img"
+    />
+    <div class="card-body p-1">
+      <p class="card-text">Carapulcra</p>
+    </div>
+    <div
+      class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
+    >
+      <span
+        >S/
+        <span class="app-custom-text-orange-dark">24</span></span
+      >
+      <button
+        class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
+      >
+        <span class="position-absolute top-0" style="left: 5px">+</span>
+      </button>
+    </div>
+  </div>
+        </div>
+      </div>
+
+      <!-- floating menu section -->
+      <div
+        id="floating-menu"
+        class="app-custom-floating-menu-container d-none flex-column app-custom-font-bolder p-3 shadow-lg border"
+      >
+        <div class="d-flex align-items-center">
+          <span class="pe-3">Mi Orden</span>
+          <button
+          id="changeDeliveryOption"
+            class="btn btn-sm btn-dark fw-bold app-btn-darker-custom rounded-pill py-0 px-3"
+          >
+            Para llevar
+          </button>
+          <span class="ms-auto app-custom-orange fs-4">S/ 23</span>
+        </div>
+
+        <div class="d-flex justify-content-between pt-3 gap-3">
+          <button
+            id="cancel-order"
+            class="btn btn-light w-50 app-btn-outline-custom app-custom-font-bolder rounded-pill"
+            data-bs-toggle="modal" data-bs-target="#cancelOrderModal"
+            >
+            CANCELAR ORDEN
+          </button>
+            <button
+            data-bs-toggle="modal"
+            data-bs-target="#checkoutOrderModal"
+            type="button"
+            class="btn btn-dark w-50 app-btn-darker-custom app-custom-font-bolder rounded-pill"
+          >
+            VER ORDEN
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

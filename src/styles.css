@@ -1,1 +1,138 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap"); */
+
+body {
+  font-family: "Lato", sans-serif !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-bg);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-orange-darker);
+}
+
+:root {
+  --main-bg: #f57c18;
+  --main-bg-hover-bg: #c26213;
+  --main-active-bg: #8f480e;
+  --main-gray-bg: #f4f4f4;
+  --main-gray-dark-bg: #b7b7b7;
+  --main-gray-dark2-bg: #838383;
+  --main-gray-dark3-bg: #4f4f4f;
+  --main-subtext: #c0c0c0;
+  --main-orange-text: #d97624;
+  --main-orange-darker: #d8711c;
+  --main-orange-outline: #f57c18;
+}
+
+.app-custom-bg {
+  background: var(--main-bg);
+}
+
+.main-text {
+  color: var(--main-orange-text);
+}
+
+.app-custom-orange {
+  color: var(--main-orange-darker);
+}
+
+.app-custom-overlay {
+  background: linear-gradient(
+    3deg,
+    rgba(244, 244, 244, 0.832859) 0%,
+    #f4f4f4 0.01%,
+    #f4f4f4 0.02%,
+    rgba(244, 244, 244, 0) 100%
+  );
+}
+
+.app-custom-font-bolder {
+  font-weight: 800;
+}
+
+.app-custom-font-gothic {
+  font-family: "League Gothic", sans-serif;
+}
+
+h4.app-custom-font-title {
+  font-size: 6.3rem;
+  line-height: 0.7;
+}
+
+.app-custom-font-subttitle {
+  color: var(--main-bg);
+  font-size: 3.5rem;
+}
+
+.app-btn-custom {
+  --bs-btn-bg: var(--main-bg) !important;
+  --bs-btn-hover-bg: var(--main-bg-hover-bg) !important;
+  --bs-btn-active-bg: var(--main-active-bg) !important;
+}
+
+.app-btn-custom-icon {
+  --bs-btn-bg: var(--main-bg) !important;
+  --bs-btn-hover-bg: var(--main-bg-hover-bg) !important;
+  --bs-btn-active-bg: var(--main-active-bg) !important;
+  border-radius: 100%;
+  width: 30px;
+  padding: 0px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.app-bg-img {
+  background-image: url("assets/public/lentils-stew-peru-traditional-comfort-food-buffet-table 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.right {
+  top: 2px;
+  right: 20px;
+}
+
+.app-btn-darker-custom {
+  border-color: rgba(0, 0, 0, 0);
+  --bs-btn-bg: var(--main-orange-darker) !important;
+  --bs-btn-hover-bg: var(--main-bg-hover-bg) !important;
+  --bs-btn-active-bg: var(--main-active-bg) !important;
+  --bs-btn-hover-border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.app-btn-gray-custom {
+  border-color: rgba(0, 0, 0, 0);
+  --bs-btn-bg: var(--main-gray-dark-bg) !important;
+  --bs-btn-hover-bg: var(--main-gray-dark2-bg) !important;
+  --bs-btn-active-bg: var(--main-gray-dark3-bg) !important;
+  --bs-btn-hover-border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.app-btn-outline-custom {
+  border: none;
+  color: #000;
+  outline: 2px solid var(--main-orange-outline);
+  --bs-btn-active-border-color: var(--main-orange-outline) !important;
+}
+
+[type="radio"]:focus {
+  outline: 3px solid var(--main-orange-text) !important;
+}
