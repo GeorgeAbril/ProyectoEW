@@ -50,7 +50,7 @@
         <div class="mt-4 row gap-3 px-4">
           <button type="radio" class="btn bg-light col py-4 border-0">
             <img
-              src="../public/icons/document-icon.png"
+              src="../../../assets/public/icons/document-icon.png"
               class="d-block mb-4 mx-auto"
               alt="..."
               width="120"
@@ -59,7 +59,7 @@
           </button>
           <button type="radio" class="btn bg-light col py-4 border-0">
             <img
-              src="../public/icons/email-icon.png"
+              src="../../../assets/public/icons/email-icon.png"
               class="d-block mb-4 mx-auto"
               alt="..."
               width="120"
@@ -103,7 +103,7 @@
         <div class="d-flex flex-column align-items-center">
           <img
             class="img-fluid p-5 py-4"
-            src="../public/icons/clock-icon.png"
+            src="../../../assets/public/icons/clock-icon.png"
             alt="card-icon-img"
           />
           <h6 class="app-custom-font-bolder">PEDIDO PROCESÁNDOSE...</h6>
@@ -145,7 +145,7 @@
         <div class="d-flex flex-column align-items-center">
           <img
             class="img-fluid p-5 py-4"
-            src="../public/icons/credit-card-icon.png"
+            src="../../../assets/public/icons/credit-card-icon.png"
             alt="card-icon-img"
           />
           <h6 class="app-custom-font-bolder">INSERTE SU TARJETA DE</h6>
@@ -182,26 +182,15 @@
         <div class="mt-4 row gap-3 px-4">
           <button type="radio" class="btn bg-light border-0 col py-4">
             <img
-              src="../public/icons/payment-icon.png"
+              src="../../../assets/public/icons/payment-icon.png"
               class="d-block mb-4 mx-auto"
               alt="..."
               width="120"
             />
             <strong class="text-center mt-4">Efectivo</strong>
           </button>
-          <button
-            id="payusingcreditcardbtn"
-            data-bs-toggle="modal"
-            data-bs-target="#insertcreditcard1st"
-            type="radio"
-            class="btn bg-light border-0 col py-4"
-          >
-            <img
-              src="../public/icons/credit-card-icon.png"
-              class="d-block mb-4 mx-auto"
-              alt="..."
-              width="120"
-            />
+          <button (click)="creditCardClick()" id="payusingcreditcardbtn" data-bs-toggle="modal" data-bs-target="#insertcreditcard1st" type="radio" class="btn bg-light border-0 col py-4">
+            <img src="../../../assets/public/icons/credit-card-icon.png" class="d-block mb-4 mx-auto" alt="..." width="120"/>
             <strong class="text-center mt-4">Tarjeta</strong>
           </button>
         </div>
@@ -249,7 +238,7 @@
             <div class="item-price fw-bold">S/23</div>
             <div class="item-action" onclick="removeItem(0)">
               <img
-                src="../public/icons/trash-icon.png"
+                src="../../../assets/public/icons/trash-icon.png"
                 alt="trash"
                 width="20"
               />
@@ -275,7 +264,7 @@
             <div class="item-price fw-bold">S/23</div>
             <div class="item-action" onclick="removeItem(1)">
               <img
-                src="../public/icons/trash-icon.png"
+                src="../../../assets/public/icons/trash-icon.png"
                 alt="trash"
                 width="20"
               />
@@ -301,7 +290,7 @@
             <div class="item-price fw-bold">S/23</div>
             <div class="item-action" onclick="removeItem(2)">
               <img
-                src="../public/icons/trash-icon.png"
+                src="../../../assets/public/icons/trash-icon.png"
                 alt="trash"
                 width="20"
               />
@@ -327,7 +316,7 @@
             <div class="item-price fw-bold">S/23</div>
             <div class="item-action" onclick="removeItem(3)">
               <img
-                src="../public/icons/trash-icon.png"
+                src="../../../assets/public/icons/trash-icon.png"
                 alt="trash"
                 width="20"
               />
@@ -360,7 +349,7 @@
             >
               <img
                 class="mx-auto"
-                src="../public/icons/edit-notes-icon.png"
+                src="../../../assets/public/icons/edit-notes-icon.png"
                 alt="icon"
                 width="30"
               />
@@ -369,7 +358,7 @@
             <button type="button" class="btn">
               <img
                 class="mx-auto"
-                src="../public/icons/gift-icon.png"
+                src="../../../assets/public/icons/gift-icon.png"
                 alt="icon"
                 width="30"
               />
@@ -438,11 +427,7 @@
     >
       <!-- header row template loader before middle section-->
       <header class="text-center py-3 app-custom-bg">
-        <img
-          src="../public/logo/app-logo-white.png"
-          alt="app-logo-img"
-          width="160"
-        />
+        <img src="../../../assets/public/logo/app-logo-white.png" alt="app-logo-img" width="160"/>
       </header>
 
       <div class="px-3 pb-4 app-custom-before-bg">
@@ -478,21 +463,21 @@
           <div class="carousel-inner rounded-3">
             <div class="carousel-item active">
               <img
-                src="../public/carousel-imgs/carousel-img01.png"
+                src="../../../assets/public/carousel-imgs/carousel-img01.png"
                 class="w-100"
                 alt="..."
               />
             </div>
             <div class="carousel-item">
               <img
-                src="../public/carousel-imgs/carousel-img02.png"
+                src="../../../assets/public/carousel-imgs/carousel-img02.png"
                 class="w-100"
                 alt="..."
               />
             </div>
             <div class="carousel-item">
               <img
-                src="../public/carousel-imgs/carousel-img03.png"
+                src="../../../assets/public/carousel-imgs/carousel-img03.png"
                 class="w-100"
                 alt="..."
               />
@@ -537,7 +522,7 @@
           <div
             class="card shadow-sm app-custom-card-orange-bg app-custom-card border-0 rounded-4"
           >
-            <img src="../public/category-imgs/criollo.png" alt="categ-img" />
+            <img src="../../../assets/public/category-imgs/criollo.png" alt="categ-img" />
             <div class="card-body p-0">
               <div
                 class="card-text app-custom-card-text app-custom-font-bolder pb-2"
@@ -550,7 +535,7 @@
           <div
           class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4"
         >
-          <img src="../public/category-imgs/marino.png" alt="categ-img" />
+          <img src="../../../assets/public/category-imgs/marino.png" alt="categ-img" />
           <div class="card-body p-0">
             <div
               class="card-text app-custom-card-text app-custom-font-bolder pb-2"
@@ -563,7 +548,7 @@
           <div
             class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4"
           >
-            <img src="../public/category-imgs/tragos.png" alt="categ-img" />
+            <img src="../../../assets/public/category-imgs/tragos.png" alt="categ-img" />
             <div class="card-body p-0">
               <div
                 class="card-text app-custom-card-text app-custom-font-bolder pb-2"
@@ -575,7 +560,7 @@
           <div
             class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4"
           >
-            <img src="../public/category-imgs/bebidas.png" alt="categ-img" />
+            <img src="../../../assets/public/category-imgs/bebidas.png" alt="categ-img" />
             <div class="card-body p-0">
               <div
                 class="card-text app-custom-card-text app-custom-font-bolder pb-2"
@@ -587,7 +572,7 @@
           <div
             class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4"
           >
-            <img src="../public/category-imgs/postres.png" alt="categ-img" />
+            <img src="../../../assets/public/category-imgs/postres.png" alt="categ-img" />
             <div class="card-body p-0">
               <div
                 class="card-text app-custom-card-text app-custom-font-bolder pb-2"
@@ -606,7 +591,7 @@
         >
           <div class="card app-custom-dish-card-width p-2 pb-0">
             <img
-              src="../public/criollodishes-img/arrozconpato.png"
+              src="../../../assets/public/criollodishes-img/arrozconpato.png"
               class="card-img-top"
               alt="dish-img"
             />
@@ -631,7 +616,7 @@
           </div>
           <div class="card app-custom-dish-card-width p-2 pb-0">
             <img
-              src="../public/criollodishes-img/tacutacu.png"
+              src="../../../assets/public/criollodishes-img/tacutacu.png"
               class="card-img-top"
               alt="dish-img"
             />
@@ -654,7 +639,7 @@
           </div>
           <div class="card app-custom-dish-card-width p-2 pb-0">
             <img
-              src="../public/criollodishes-img/causarellena.png"
+              src="../../../assets/public/criollodishes-img/causarellena.png"
               class="card-img-top"
               alt="dish-img"
             />
@@ -685,7 +670,7 @@
         >
         <div class="card app-custom-dish-card-width p-2 pb-0">
     <img
-      src="../public/criollodishes-img/picantedecarne.png"
+      src="../../../assets/public/criollodishes-img/picantedecarne.png"
       class="card-img-top"
       alt="dish-img"
     />
@@ -708,7 +693,7 @@
   </div>
   <div class="card app-custom-dish-card-width p-2 pb-0">
     <img
-      src="../public/criollodishes-img/pachamanca.png"
+      src="../../../assets/public/criollodishes-img/pachamanca.png"
       class="card-img-top"
       alt="dish-img"
     />
@@ -731,7 +716,7 @@
   </div>
   <div class="card app-custom-dish-card-width p-2 pb-0">
     <img
-      src="../public/criollodishes-img/tallarinesverdes.png"
+      src="../../../assets/public/criollodishes-img/tallarinesverdes.png"
       class="card-img-top"
       alt="dish-img"
     />
@@ -754,7 +739,7 @@
   </div>
   <div class="card app-custom-dish-card-width p-2 pb-0">
     <img
-      src="../public/criollodishes-img/asadodepollo.png"
+      src="../../../assets/public/criollodishes-img/asadodepollo.png"
       class="card-img-top"
       alt="dish-img"
     />
@@ -777,7 +762,7 @@
   </div>
   <div class="card app-custom-dish-card-width p-2 pb-0">
     <img
-      src="../public/criollodishes-img/lomosaltado.png"
+      src="../../../assets/public/criollodishes-img/lomosaltado.png"
       class="card-img-top"
       alt="dish-img"
     />
@@ -800,7 +785,7 @@
   </div>
   <div class="card app-custom-dish-card-width p-2 pb-0">
     <img
-      src="../public/criollodishes-img/carapulcra.png"
+      src="../../../assets/public/criollodishes-img/carapulcra.png"
       class="card-img-top"
       alt="dish-img"
     />
@@ -831,12 +816,7 @@
       >
         <div class="d-flex align-items-center">
           <span class="pe-3">Mi Orden</span>
-          <button
-          id="changeDeliveryOption"
-            class="btn btn-sm btn-dark fw-bold app-btn-darker-custom rounded-pill py-0 px-3"
-          >
-            Para llevar
-          </button>
+          <button (click)="miOrdenClick()" id='changeDeliveryOption' class="btn btn-sm btn-dark fw-bold app-btn-darker-custom rounded-pill py-0 px-3">Para llevar</button>
           <span class="ms-auto app-custom-orange fs-4">S/ 23</span>
         </div>
 
