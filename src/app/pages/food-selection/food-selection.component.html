@@ -514,91 +514,42 @@
 
         <!-- card categories container -->
         <div class="d-flex justify-content-between pb-4">
-          <div
-            class="card shadow-sm app-custom-card-orange-bg app-custom-card border-0 rounded-4"
-          >
-            <img src="../../../assets/public/category-imgs/criollo.png" alt="categ-img" />
+          <div  *ngFor="let c of categorias"
+          class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4">
+          <a routerLink="/foodselection/{{ c.id }}">
+            <img src="{{c.image}}" alt="categ-img" />
+            </a>
             <div class="card-body p-0">
               <div
-                class="card-text app-custom-card-text app-custom-font-bolder pb-2"
-              >
-                Criollo
+                class="card-text app-custom-card-text app-custom-font-bolder pb-2">
+                {{c.name}}
               </div>
             </div>
           </div>
-          <a href="./MarinoSection.html" class="text-decoration-none text-black">
-          <div
-          class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4"
-        >
-          <img src="../../../assets/public/category-imgs/marino.png" alt="categ-img" />
-          <div class="card-body p-0">
-            <div
-              class="card-text app-custom-card-text app-custom-font-bolder pb-2"
-            >
-              Marino
-            </div>
           </div>
-        </div>
-          </a>
-          <div
-            class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4"
-          >
-            <img src="../../../assets/public/category-imgs/tragos.png" alt="categ-img" />
-            <div class="card-body p-0">
-              <div
-                class="card-text app-custom-card-text app-custom-font-bolder pb-2"
-              >
-                Tragos
-              </div>
-            </div>
-          </div>
-          <div
-            class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4"
-          >
-            <img src="../../../assets/public/category-imgs/bebidas.png" alt="categ-img" />
-            <div class="card-body p-0">
-              <div
-                class="card-text app-custom-card-text app-custom-font-bolder pb-2"
-              >
-                Bebidas
-              </div>
-            </div>
-          </div>
-          <div
-            class="card shadow-sm app-custom-gray app-custom-card border-0 rounded-4"
-          >
-            <img src="../../../assets/public/category-imgs/postres.png" alt="categ-img" />
-            <div class="card-body p-0">
-              <div
-                class="card-text app-custom-card-text app-custom-font-bolder pb-2"
-              >
-                Postres
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- scrollable dish list -->
+
+
+      <!-- scrollable dish list// platos recomendados -->
       <div class="flex-grow-1 overflow-y-scroll">
         <h6 class="app-custom-font-bolder text-start ps-4 pt-2">Recomendados</h6>
         <div
           class="mt-3 mb-3 d-flex justify-content-center gap-3 flex-wrap app-custom-dish-card-text fw-bold"
         >
-          <div class="card app-custom-dish-card-width p-2 pb-0">
+          <div *ngFor="let r of recomendados" class="card app-custom-dish-card-width p-2 pb-0">
             <img
-              src="../../../assets/public/criollodishes-img/arrozconpato.png"
+              src="{{r.image}}"
               class="card-img-top"
               alt="dish-img"
             />
             <div class="card-body p-1">
-              <p class="card-text app-card-name">Arroz con pollo</p>
+              <p class="card-text app-card-name">{{r.name}}</p>
             </div>
             <div
               class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
             >
               <span
                 >S/
-                <span class="app-custom-text-orange-dark">24</span></span
+                <span class="app-custom-text-orange-dark">{{r.price}}</span></span
               >
               <button
                 id="add-to-list"
@@ -609,53 +560,8 @@
               </button>
             </div>
           </div>
-          <div class="card app-custom-dish-card-width p-2 pb-0">
-            <img
-              src="../../../assets/public/criollodishes-img/tacutacu.png"
-              class="card-img-top"
-              alt="dish-img"
-            />
-            <div class="card-body p-1">
-              <p class="card-text app-card-name">Tacu Tracu</p>
-            </div>
-            <div
-              class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
-            >
-              <span
-                >S/
-                <span class="app-custom-text-orange-dark">24</span></span
-              >
-              <button
-                class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
-              >
-              <span class="position-absolute top-0" style="left: 5px">+</span>
-              </button>
-            </div>
-          </div>
-          <div class="card app-custom-dish-card-width p-2 pb-0">
-            <img
-              src="../../../assets/public/criollodishes-img/causarellena.png"
-              class="card-img-top"
-              alt="dish-img"
-            />
-            <div class="card-body p-1">
-              <p class="card-text">Causa rellena</p>
-            </div>
-            <div
-              class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
-            >
-              <span
-                >S/
-                <span class="app-custom-text-orange-dark">24</span></span
-              >
-              <button
-                class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
-              >
-              <span class="position-absolute top-0" style="left: 5px">+</span>
-              </button>
-            </div>
-          </div>
         </div>
+      </div>
 
         <!-- Más pedidos -->
         <hr class="border border-dark border-opacity-25 border-4">
@@ -663,146 +569,33 @@
         <div
           class="mt-3 mb-4 d-flex justify-content-center gap-3 flex-wrap app-custom-dish-card-text fw-bold"
         >
-        <div class="card app-custom-dish-card-width p-2 pb-0">
+        <div *ngFor="let m of maspedidos" class="card app-custom-dish-card-width p-2 pb-0">
     <img
-      src="../../../assets/public/criollodishes-img/picantedecarne.png"
+      src="{{m.image}}"
       class="card-img-top"
       alt="dish-img"
     />
     <div class="card-body p-1">
-      <p class="card-text">Picante de carne</p>
+      <p class="card-text">{{m.name}}</p>
     </div>
     <div
       class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
     >
       <span
         >S/
-        <span class="app-custom-text-orange-dark">24</span></span
+        <span class="app-custom-text-orange-dark">{{m.price}}</span></span
       >
       <button
-        class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
-      >
-        <span class="position-absolute top-0" style="left: 5px">+</span>
-      </button>
+                id="add-to-list"
+                (click)="addToList()"
+                class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
+              >
+                <span class="position-absolute top-0" style="left: 5px">+</span>
+              </button>
     </div>
   </div>
-  <div class="card app-custom-dish-card-width p-2 pb-0">
-    <img
-      src="../../../assets/public/criollodishes-img/pachamanca.png"
-      class="card-img-top"
-      alt="dish-img"
-    />
-    <div class="card-body p-1">
-      <p class="card-text">Pachamanca</p>
-    </div>
-    <div
-      class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
-    >
-      <span
-        >S/
-        <span class="app-custom-text-orange-dark">24</span></span
-      >
-      <button
-        class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
-      >
-        <span class="position-absolute top-0" style="left: 5px">+</span>
-      </button>
-    </div>
   </div>
-  <div class="card app-custom-dish-card-width p-2 pb-0">
-    <img
-      src="../../../assets/public/criollodishes-img/tallarinesverdes.png"
-      class="card-img-top"
-      alt="dish-img"
-    />
-    <div class="card-body p-1">
-      <p class="card-text">Tallarines verdes</p>
-    </div>
-    <div
-      class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
-    >
-      <span
-        >S/
-        <span class="app-custom-text-orange-dark">24</span></span
-      >
-      <button
-        class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
-      >
-        <span class="position-absolute top-0" style="left: 5px">+</span>
-      </button>
-    </div>
-  </div>
-  <div class="card app-custom-dish-card-width p-2 pb-0">
-    <img
-      src="../../../assets/public/criollodishes-img/asadodepollo.png"
-      class="card-img-top"
-      alt="dish-img"
-    />
-    <div class="card-body p-1">
-      <p class="card-text">Asado de pollo</p>
-    </div>
-    <div
-      class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
-    >
-      <span
-        >S/
-        <span class="app-custom-text-orange-dark">24</span></span
-      >
-      <button
-        class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
-      >
-        <span class="position-absolute top-0" style="left: 5px">+</span>
-      </button>
-    </div>
-  </div>
-  <div class="card app-custom-dish-card-width p-2 pb-0">
-    <img
-      src="../../../assets/public/criollodishes-img/lomosaltado.png"
-      class="card-img-top"
-      alt="dish-img"
-    />
-    <div class="card-body p-1">
-      <p class="card-text">Lomo saltado</p>
-    </div>
-    <div
-      class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
-    >
-      <span
-        >S/
-        <span class="app-custom-text-orange-dark">24</span></span
-      >
-      <button
-        class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
-      >
-        <span class="position-absolute top-0" style="left: 5px">+</span>
-      </button>
-    </div>
-  </div>
-  <div class="card app-custom-dish-card-width p-2 pb-0">
-    <img
-      src="../../../assets/public/criollodishes-img/carapulcra.png"
-      class="card-img-top"
-      alt="dish-img"
-    />
-    <div class="card-body p-1">
-      <p class="card-text">Carapulcra</p>
-    </div>
-    <div
-      class="card-footer app-custom-dish-footer bg-white d-flex align-items-center app-custom-font-bolder"
-    >
-      <span
-        >S/
-        <span class="app-custom-text-orange-dark">24</span></span
-      >
-      <button
-        class="btn btn-dark btn-sm ms-auto app-custom-font-bolder app-btn-darker-custom position-relative"
-      >
-        <span class="position-absolute top-0" style="left: 5px">+</span>
-      </button>
-    </div>
-  </div>
-        </div>
-      </div>
+
 
       <!-- floating menu section -->
       <div
@@ -812,7 +605,7 @@
         <div class="d-flex align-items-center">
           <span class="pe-3">Mi Orden</span>
           <button (click)="miOrdenClick()" id='changeDeliveryOption' class="btn btn-sm btn-dark fw-bold app-btn-darker-custom rounded-pill py-0 px-3">Para llevar</button>
-          <span class="ms-auto app-custom-orange fs-4">S/ 23</span>
+          <span class="ms-auto app-custom-orange fs-4"> </span>
         </div>
 
         <div class="d-flex justify-content-between pt-3 gap-3">

@@ -1,11 +1,16 @@
 module.exports = app => {
-    app.get('/api/project/GetProject', (req, res) => {
-        var data = require('../json/projects.json');
+    app.get('/api/category/Getcategory', (req, res) => {
+        var data = require('../json/category.json');
         res.json(data);
     })
 
-    app.get('/api/apartment/GetApartments', (req, res) => {
-        var data = require('../json/apartment.json');
+    app.get('/api/recomendados/GetRecomendados', (req, res) => {
+        var data = require('../json/recomendados.json');
+        res.json(data);
+    })
+
+    app.get('/api/pedidos/GetMasPedidos', (req, res)=>{
+        var data = require('../json/maspedidos.json');
         res.json(data);
     })
 }
