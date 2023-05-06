@@ -41,13 +41,8 @@ export class FoodSelectionComponent{
       })
     }
 
-<<<<<<< HEAD
     be_categoria_listar() {
       this.ps.be_categoria_listar().subscribe((rest: any) => {
-=======
-    be_proyectos_listar() {
-      this.ps.be_proyecto_listar().subscribe((rest: any) => {
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
         this.categorias = rest.data
         console.log(rest);
       })
@@ -60,7 +55,6 @@ export class FoodSelectionComponent{
         this.recomendados = rest.data.filter((item:{categoryId:number})=> item.categoryId==idcateg);
         console.log(this.recomendados)
       })
-<<<<<<< HEAD
     }
 
     //lo más pedido
@@ -70,26 +64,10 @@ export class FoodSelectionComponent{
         this.maspedidos = rest.data.filter((item:{categoryId:number})=> item.categoryId==idcateg);
         console.log(this.maspedidos);
       })
-=======
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
 
     }
 
 
-<<<<<<< HEAD
-=======
-    //lo más pedido
-
-    obtener_maspedido_id(idcateg:number){
-      this.ps.obtener_maspedidos().subscribe((rest:any)=>{
-        this.maspedidos = rest.data.filter((item:{categoryId:number})=> item.categoryId==idcateg);
-        console.log(this.maspedidos);
-      })
-
-    }
-
-
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
     //mostrar en consola
     ngOnInit(): void {
       this.ar.params.subscribe((params:Params)=>{
@@ -102,10 +80,7 @@ export class FoodSelectionComponent{
       this.listar_categoria();
       this.obtener_recomedados_id(1);
       this.obtener_maspedido_id(1);
-<<<<<<< HEAD
       this.be_categoria_listar();
-=======
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
     }
 
 
