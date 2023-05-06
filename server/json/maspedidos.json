@@ -4,33 +4,21 @@
             "categoryId": 1,
             "id": 1,
             "name": "Picante de carne",
-<<<<<<< HEAD
             "price": "21",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/criollodishes-img/picantedecarne.png"
         },
         {
             "categoryId": 1,
             "id": 2,
             "name": "Pachamanca",
-<<<<<<< HEAD
             "price": "25",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/criollodishes-img/pachamanca.png"
         },
         {
             "categoryId": 1,
             "id": 3,
             "name": "Tallarines Verdes",
-<<<<<<< HEAD
             "price": "18",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/criollodishes-img/tallarinesverdes.png"
         },
         {
@@ -44,33 +32,21 @@
             "categoryId": 1,
             "id": 5,
             "name": "Lomo Saltado",
-<<<<<<< HEAD
             "price": "22",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/criollodishes-img/lomosaltado.png"
         },
         {
             "categoryId": 1,
             "id": 6,
             "name": "Carapulcra",
-<<<<<<< HEAD
             "price": "22",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/criollodishes-img/carapulcra.png"
         },
         {
             "categoryId": 2,
             "id": 1,
             "name": "Chilcano",
-<<<<<<< HEAD
             "price": "22",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/marinodishes-img/chilcano.png"
         },
         {
@@ -84,11 +60,7 @@
             "categoryId": 2,
             "id": 3,
             "name": "Leche de Tigre",
-<<<<<<< HEAD
             "price": "22",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/marinodishes-img/lechetigre.png"
         },
         {
@@ -102,44 +74,28 @@
             "categoryId": 2,
             "id": 5,
             "name": "Sopa PariHuela",
-<<<<<<< HEAD
             "price": "18",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/marinodishes-img/sopaparihuela.png"
         },
         {
             "categoryId": 2,
             "id": 6,
             "name": "Sudado de Pescado",
-<<<<<<< HEAD
             "price": "20",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/marinodishes-img/sudadopescado.png"
         },
         {
             "categoryId": 3,
             "id": 1,
             "name": "Aguaymanto Sour",
-<<<<<<< HEAD
             "price": "15",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/tragosdrinks-img/aguaymantosour.png"
         },
         {
             "categoryId": 3,
             "id": 2,
             "name": "Camu Camu Sour",
-<<<<<<< HEAD
             "price": "17",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/tragosdrinks-img/camu_camu_sour.png"
         },
         {
@@ -153,66 +109,42 @@
             "categoryId": 4,
             "id": 1,
             "name": "chicha De Jora",
-<<<<<<< HEAD
             "price": "12",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/bebidasdrinks-img/chicha_jora.png"
         },
         {
             "categoryId": 4,
             "id": 2,
             "name": "Inka Cola",
-<<<<<<< HEAD
             "price": "5",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/bebidasdrinks-img/inkacola.png"
         },
         {
             "categoryId": 4,
             "id": 3,
             "name": "CocaCola",
-<<<<<<< HEAD
             "price": "5",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/bebidasdrinks-img/cocacola.png"
         },
         {
             "categoryId": 5,
             "id": 1,
             "name": "Picarones",
-<<<<<<< HEAD
             "price": "12",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/postresdishes-img/picarones.png"
         },
         {
             "categoryId": 5,
             "id": 2,
             "name": "Arroz Zambito",
-<<<<<<< HEAD
             "price": "6",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/postresdishes-img/arrozzambito.png"
         },
         {
             "categoryId": 5,
             "id": 3,
             "name": "Masamorra de piña",
-<<<<<<< HEAD
             "price": "7",
-=======
-            "price": "24",
->>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/postresdishes-img/mazamorradepina.png"
         }
     ]
