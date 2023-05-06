@@ -1,0 +1,29 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Criollo",
+            "image": "assets/public/category-imgs/criollo.png"
+        },
+        {
+            "id": 2,
+            "name": "Marino",
+            "image": "assets/public/category-imgs/marino.png"
+        },
+        {
+            "id": 3,
+            "name": "Tragos",
+            "image": "assets/public/category-imgs/tragos.png"
+        },
+        {
+            "id": 4,
+            "name": "Bebidas",
+            "image": "assets/public/category-imgs/bebidas.png"
+        },
+        {
+            "id": 5,
+            "name": "postres",
+            "image": "assets/public/category-imgs/postres.png"
+        }   
+    ]
+}

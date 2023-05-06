@@ -1,0 +1,151 @@
+{
+    "data":[
+        {
+            "categoryId": 1,
+            "id": 1,
+            "name": "Picante de carne",
+            "price": "21",
+            "image": "assets/public/criollodishes-img/picantedecarne.png"
+        },
+        {
+            "categoryId": 1,
+            "id": 2,
+            "name": "Pachamanca",
+            "price": "25",
+            "image": "assets/public/criollodishes-img/pachamanca.png"
+        },
+        {
+            "categoryId": 1,
+            "id": 3,
+            "name": "Tallarines Verdes",
+            "price": "18",
+            "image": "assets/public/criollodishes-img/tallarinesverdes.png"
+        },
+        {
+            "categoryId": 1,
+            "id": 4,
+            "name": "Asado de Pollo",
+            "price": "24",
+            "image": "assets/public/criollodishes-img/asadodepollo.png"
+        },
+        {
+            "categoryId": 1,
+            "id": 5,
+            "name": "Lomo Saltado",
+            "price": "22",
+            "image": "assets/public/criollodishes-img/lomosaltado.png"
+        },
+        {
+            "categoryId": 1,
+            "id": 6,
+            "name": "Carapulcra",
+            "price": "22",
+            "image": "assets/public/criollodishes-img/carapulcra.png"
+        },
+        {
+            "categoryId": 2,
+            "id": 1,
+            "name": "Chilcano",
+            "price": "22",
+            "image": "assets/public/marinodishes-img/chilcano.png"
+        },
+        {
+            "categoryId": 2,
+            "id": 2,
+            "name": "Choritos Chalaca",
+            "price": "24",
+            "image": "assets/public/marinodishes-img/choritoschalaca.png"
+        },
+        {
+            "categoryId": 2,
+            "id": 3,
+            "name": "Leche de Tigre",
+            "price": "22",
+            "image": "assets/public/marinodishes-img/lechetigre.png"
+        },
+        {
+            "categoryId": 2,
+            "id": 4,
+            "name": "Asado de Pollo",
+            "price": "24",
+            "image": "assets/public/criollodishes-img/asadodepollo.png"
+        },
+        {
+            "categoryId": 2,
+            "id": 5,
+            "name": "Sopa PariHuela",
+            "price": "18",
+            "image": "assets/public/marinodishes-img/sopaparihuela.png"
+        },
+        {
+            "categoryId": 2,
+            "id": 6,
+            "name": "Sudado de Pescado",
+            "price": "20",
+            "image": "assets/public/marinodishes-img/sudadopescado.png"
+        },
+        {
+            "categoryId": 3,
+            "id": 1,
+            "name": "Aguaymanto Sour",
+            "price": "15",
+            "image": "assets/public/tragosdrinks-img/aguaymantosour.png"
+        },
+        {
+            "categoryId": 3,
+            "id": 2,
+            "name": "Camu Camu Sour",
+            "price": "17",
+            "image": "assets/public/tragosdrinks-img/camu_camu_sour.png"
+        },
+        {
+            "categoryId": 3,
+            "id": 3,
+            "name": "Pisco Sunrise",
+            "price": "24",
+            "image": "assets/public/tragosdrinks-img/piscosunrise.png"
+        },
+        {
+            "categoryId": 4,
+            "id": 1,
+            "name": "chicha De Jora",
+            "price": "12",
+            "image": "assets/public/bebidasdrinks-img/chicha_jora.png"
+        },
+        {
+            "categoryId": 4,
+            "id": 2,
+            "name": "Inka Cola",
+            "price": "5",
+            "image": "assets/public/bebidasdrinks-img/inkacola.png"
+        },
+        {
+            "categoryId": 4,
+            "id": 3,
+            "name": "CocaCola",
+            "price": "5",
+            "image": "assets/public/bebidasdrinks-img/cocacola.png"
+        },
+        {
+            "categoryId": 5,
+            "id": 1,
+            "name": "Picarones",
+            "price": "12",
+            "image": "assets/public/postresdishes-img/picarones.png"
+        },
+        {
+            "categoryId": 5,
+            "id": 2,
+            "name": "Arroz Zambito",
+            "price": "6",
+            "image": "assets/public/postresdishes-img/arrozzambito.png"
+        },
+        {
+            "categoryId": 5,
+            "id": 3,
+            "name": "Masamorra de piña",
+            "price": "7",
+            "image": "assets/public/postresdishes-img/mazamorradepina.png"
+        }
+    ]
+}

@@ -2,6 +2,8 @@ import { AppComponent } from './../../app.component';
 import { Component, OnInit,ViewChild } from '@angular/core';
 import { JavascriptService } from 'src/app/service/javascript.service';
 import * as bootstrap from 'bootstrap';
+import { FoodcategoryService } from 'src/app/service/foodcategory.service';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-food-selection',
@@ -11,15 +13,76 @@ import * as bootstrap from 'bootstrap';
 
 export class FoodSelectionComponent{
 
-  constructor(private JavaService: JavascriptService) {
+  categorias :any = [];
+  recomendados :any=[];
+  maspedidos :any=[];
+
+   // Constructor JavaScript, servicio backend
+  constructor(private JavaService: JavascriptService, readonly ps: FoodcategoryService,
+     private ar: ActivatedRoute) {
     //this.JavaService.loadScript();
     }
 
-  ngOnInit(): void {
-    //this.JavaService.loadScript();
-    //alert('hola mundo javascript');
+    //categorias
+    /// este metodo listar no afecta en nada!!! puedes borrarlo
+
+    listar_categoria() {
+      this.ps.obtener_categoria().subscribe((rest: any) => {
+        this.categorias = rest.data;
+       console.log(this.categorias);
+      })
+    }
+    /////
+
+    obtener_category_id(identificador:number){
+      this.ps.obtener_categoria().subscribe((rest:any)=>{
+        this.categorias=rest.data.filter((item:{id:number})=>item.id==identificador);
+        console.log(this.categorias)
+      })
+    }
+
+    be_categoria_listar() {
+      this.ps.be_categoria_listar().subscribe((rest: any) => {
+        this.categorias = rest.data
+        console.log(rest);
+      })
+    }
+
+    //recomendados
+
+    obtener_recomedados_id(idcateg:number){
+      this.ps.obteener_recomendados().subscribe((rest:any)=>{
+        this.recomendados = rest.data.filter((item:{categoryId:number})=> item.categoryId==idcateg);
+        console.log(this.recomendados)
+      })
+    }
+
+    //lo más pedido
+
+    obtener_maspedido_id(idcateg:number){
+      this.ps.obtener_maspedidos().subscribe((rest:any)=>{
+        this.maspedidos = rest.data.filter((item:{categoryId:number})=> item.categoryId==idcateg);
+        console.log(this.maspedidos);
+      })
 
     }
+
+
+    //mostrar en consola
+    ngOnInit(): void {
+      this.ar.params.subscribe((params:Params)=>{
+        if(params['id']){
+          //this.obtener_category_id(params['id']);
+          this.obtener_recomedados_id(params['id']);
+          this.obtener_maspedido_id(params['id']);
+        }
+      })
+      this.listar_categoria();
+      this.obtener_recomedados_id(1);
+      this.obtener_maspedido_id(1);
+      this.be_categoria_listar();
+    }
+
 
     addToList(){
       const floatingMenu = document.getElementById("floating-menu");

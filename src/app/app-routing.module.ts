@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'new', component: NewRegisterComponent },
   { path: 'home', component: HomeComponent },
   { path: 'selectLanguage', component:SelectLanguageComponent},
+  { path: 'foodselection/:id', component:FoodSelectionComponent},
   { path: 'foodselection', component:FoodSelectionComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'prefix'}
 ];

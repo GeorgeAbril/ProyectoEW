@@ -1,0 +1,109 @@
+{
+    "data":[
+        {
+            "categoryId": 1,
+            "id": 1,
+            "name": "Arroz con Pollo",
+            "price": "24",
+            "image": "assets/public/criollodishes-img/arrozconpato.png"
+        },
+        {
+            "categoryId": 1,
+            "id": 2,
+            "name": "Tacu Tacu",
+            "price": "15",
+            "image": "assets/public/criollodishes-img/tacutacu.png"
+        },
+        {
+            "categoryId": 1,
+            "id": 3,
+            "name": "Causa Rellena",
+            "price": "16",
+            "image": "assets/public/criollodishes-img/causarellena.png"
+        },
+        {
+            "categoryId": 2,
+            "id": 1,
+            "name": "Arroz Chaufa de Mariscos",
+            "price": "24",
+            "image": "assets/public/marinodishes-img/arrozchaufademariscos.png"
+        },
+        {
+            "categoryId": 2,
+            "id": 2,
+            "name": "Arroz Con Mariscos",
+            "price": "20",
+            "image": "assets/public/marinodishes-img/arrozconmariscos.png"
+        },
+        {
+            "categoryId": 2,
+            "id": 3,
+            "name": "Chicharrones de Calamar",
+            "price": "22",
+            "image": "assets/public/marinodishes-img/chicharronescalamar.png"
+        },
+        {
+            "categoryId": 3,
+            "id": 1,
+            "name": "Pisco Sour",
+            "price": "18",
+            "image": "assets/public/tragosdrinks-img/piscosour.png"
+        },
+        {
+            "categoryId": 3,
+            "id": 2,
+            "name": "Chilcano",
+            "price": "25",
+            "image": "assets/public/tragosdrinks-img/chilcano.png"
+        },
+        {
+            "categoryId": 3,
+            "id": 3,
+            "name": "Macchu Picchu",
+            "price": "22",
+            "image": "assets/public/tragosdrinks-img/macchu_picchu.png"
+        },
+        {
+            "categoryId": 4,
+            "id": 1,
+            "name": "Chicha Morada",
+            "price": "12",
+            "image": "assets/public/bebidasdrinks-img/chicha_morada.png"
+        },
+        {
+            "categoryId": 4,
+            "id": 2,
+            "name": "Jugo De Frutas",
+            "price": "10",
+            "image": "assets/public/bebidasdrinks-img/juego_de_frutas.png"
+        },
+        {
+            "categoryId": 4,
+            "id": 3,
+            "name": "Jugo de Maracuyá",
+            "price": "8",
+            "image": "assets/public/bebidasdrinks-img/maracuya.png"
+        },
+        {
+            "categoryId": 5,
+            "id": 1,
+            "name": "Arroz Con Leche",
+            "price": "10",
+            "image": "assets/public/postresdishes-img/arrozconleche.png"
+        },
+        {
+            "categoryId": 5,
+            "id": 2,
+            "name": "Masamorra Morada",
+            "price": "10",
+            "image": "assets/public/postresdishes-img/masamorramorada.png"
+        },
+        {
+            "categoryId": 5,
+            "id": 3,
+            "name": "Suspiro limeño",
+            "price": "12",
+            "image": "assets/public/postresdishes-img/suspirolimeno.png"
+        }
+    ]
+}

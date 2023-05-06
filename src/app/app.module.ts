@@ -15,6 +15,7 @@ import { FoodSelectionComponent } from './pages/food-selection/food-selection.co
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { FoodSelectionComponent } from './pages/food-selection/food-selection.co
     NewRegisterComponent,
     HomeComponent,
     SelectLanguageComponent,
-    FoodSelectionComponent
+    FoodSelectionComponent,
   ],
   imports: [
     BrowserModule,
