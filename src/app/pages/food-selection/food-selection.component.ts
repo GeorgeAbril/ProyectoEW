@@ -53,7 +53,9 @@ export class FoodSelectionComponent{
     creditCardClick(){
       let processingOrderModal = new bootstrap.Modal("#processingordermodal");
       let printBillModal = new bootstrap.Modal("#printbillmodal");
-      let paymentModal = new bootstrap.Modal("#insertcreditcard1st");
+      //let paymentModal = new bootstrap.Modal("#insertcreditcard1st");
+      let paymentModal = document.getElementById('insertcreditcard1st');
+      let insertcreditcard1st = new bootstrap.Modal('#insertcreditcard1st');
       let insertCreditCardTimer = document.getElementById("insertcardtimer");
       let processingOrderTimer = document.getElementById("processingtimer");
       // const payWithCreditCardBtn = document.getElementById("payusingcreditcardbtn");
@@ -61,12 +63,13 @@ export class FoodSelectionComponent{
       // const paymentModal = new bootstrap.Modal("#insertcreditcard1st");
 
       let delay = 7000;
-      const insertCreditCardIntervalId = counter(insertCreditCardTimer);
+      let insertCreditCardIntervalId = counter(insertCreditCardTimer);
       setTimeout(loadProcessingModal, delay);
 
 
       function loadProcessingModal() {
-        paymentModal.hide();
+        paymentModal?.setAttribute('class','modal fade');
+        //paymentModal.hide();
         processingOrderModal.show();
 
         let processingOrderIntervalId = counter(processingOrderTimer);
@@ -77,8 +80,10 @@ export class FoodSelectionComponent{
           clearInterval(processingOrderIntervalId);
           processingOrderModal.hide();
           printBillModal.show();
-          const floatingMenu = document.getElementById("floating-menu");
-          floatingMenu?.setAttribute("style", "display: none !important");
+          // const floatingMenu = document.getElementById("floating-menu");
+          // floatingMenu?.setAttribute("style", "display: none !important");
+          //insertcreditcard1st.hide();
+          //hideFloatingMenu();
         }
 
         clearInterval(insertCreditCardIntervalId);
@@ -97,6 +102,7 @@ export class FoodSelectionComponent{
           }
         }, 1000);
       }
+
     }
   }
 

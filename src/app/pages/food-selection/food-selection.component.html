@@ -38,13 +38,8 @@
           <h3 class="text-center fw-bold pt-2">
             ¿Desea imprimir <br /><span class="main-text">su factura?</span>
           </h3>
-          <a href="../index.html">
-            <button
-              type="button"
-              class="btn app-btn-custom-icon position-absolute right"
-            >
-              &times;
-            </button>
+          <a class="text-decoration-none" routerLink="../home">
+            <button type="button" class="btn app-btn-custom-icon position-absolute right">x</button>
           </a>
         </header>
         <div class="mt-4 row gap-3 px-4">
@@ -405,10 +400,10 @@
           >
             NO
           </button>
-          <a href="../index.html">
+          <a routerLink="../home">
             <button
               class="btn btn-dark btn-lg app-btn-darker-custom app-custom-font-bolder rounded-pill px-5"
-              type="button"
+              type="button" data-bs-dismiss="modal" data-backdrop="false"
             >
               SÍ
             </button>
