@@ -11,14 +11,22 @@
             "categoryId": 1,
             "id": 2,
             "name": "Tacu Tacu",
+<<<<<<< HEAD
             "price": "15",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/criollodishes-img/tacutacu.png"
         },
         {
             "categoryId": 1,
             "id": 3,
             "name": "Causa Rellena",
+<<<<<<< HEAD
             "price": "16",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/criollodishes-img/causarellena.png"
         },
         {
@@ -32,77 +40,121 @@
             "categoryId": 2,
             "id": 2,
             "name": "Arroz Con Mariscos",
+<<<<<<< HEAD
             "price": "20",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/marinodishes-img/arrozconmariscos.png"
         },
         {
             "categoryId": 2,
             "id": 3,
             "name": "Chicharrones de Calamar",
+<<<<<<< HEAD
             "price": "22",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/marinodishes-img/chicharronescalamar.png"
         },
         {
             "categoryId": 3,
             "id": 1,
             "name": "Pisco Sour",
+<<<<<<< HEAD
             "price": "18",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/tragosdrinks-img/piscosour.png"
         },
         {
             "categoryId": 3,
             "id": 2,
             "name": "Chilcano",
+<<<<<<< HEAD
             "price": "25",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/tragosdrinks-img/chilcano.png"
         },
         {
             "categoryId": 3,
             "id": 3,
             "name": "Macchu Picchu",
+<<<<<<< HEAD
             "price": "22",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/tragosdrinks-img/macchu_picchu.png"
         },
         {
             "categoryId": 4,
             "id": 1,
             "name": "Chicha Morada",
+<<<<<<< HEAD
             "price": "12",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/bebidasdrinks-img/chicha_morada.png"
         },
         {
             "categoryId": 4,
             "id": 2,
             "name": "Jugo De Frutas",
+<<<<<<< HEAD
             "price": "10",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/bebidasdrinks-img/juego_de_frutas.png"
         },
         {
             "categoryId": 4,
             "id": 3,
             "name": "Jugo de Maracuyá",
+<<<<<<< HEAD
             "price": "8",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/bebidasdrinks-img/maracuya.png"
         },
         {
             "categoryId": 5,
             "id": 1,
             "name": "Arroz Con Leche",
+<<<<<<< HEAD
             "price": "10",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/postresdishes-img/arrozconleche.png"
         },
         {
             "categoryId": 5,
             "id": 2,
             "name": "Masamorra Morada",
+<<<<<<< HEAD
             "price": "10",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/postresdishes-img/masamorramorada.png"
         },
         {
             "categoryId": 5,
             "id": 3,
             "name": "Suspiro limeño",
+<<<<<<< HEAD
             "price": "12",
+=======
+            "price": "24",
+>>>>>>> 6a5e0f595222b51476ec78e35bfa20e086ce3339
             "image": "assets/public/postresdishes-img/suspirolimeno.png"
         }
     ]
